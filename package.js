@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "Meteor smart package for AWS SDK"
+  summary: "Meteor smart package for AWS SDK node.js package"
 });
 
 Package.on_use(function (api) {
