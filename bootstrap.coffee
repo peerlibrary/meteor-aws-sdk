@@ -1,7 +1,7 @@
 do -> # To not pollute the namespace
   DEPENDENCIES = [
     require: 'aws-sdk'
-    npm: 'aws-sdk@0.9.7-pre.8'
+    npm: 'git://github.com/peerlibrary/aws-sdk-js.git#7ba1def15e3e22cfd6af1439cf591e181a1443d4'
   ]
 
   require = __meteor_bootstrap__.require
