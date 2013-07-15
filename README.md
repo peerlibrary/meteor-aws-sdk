@@ -18,6 +18,9 @@ Example using [CoffeeScript](http://coffeescript.org/) and
 
     s3 = new AWS.S3()
 
-    list = blocking s3, s3.listObjects
+    list = blocking(s3, s3.listObjects)
       Bucket: 'bucketname'
       Prefix: 'subdirectory/'
+
+    for file in list.Contents
+      # ...
