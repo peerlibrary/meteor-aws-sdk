@@ -5,9 +5,10 @@ Meteor smart package for [AWS SDK](https://aws.amazon.com/sdkfornodejs/) node.js
 
 Adding this package to your [Meteor](http://www.meteor.com/) application adds `AWS` object into the global scope,
 which you can then use [according to the documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/frames.html).
+In addition to existing API, a fibers-enabled synchronous ([blocking](https://github.com/peerlibrary/meteor-blocking))
+methods are added to objects. They are named the same, but with a `Sync` suffix.
 
-Example using [CoffeeScript](http://coffeescript.org/) and
-[blocking](https://github.com/peerlibrary/meteor-blocking) package:
+Example using [CoffeeScript](http://coffeescript.org/):
 
     if Meteor.settings.AWS
       AWS.config.update
@@ -18,7 +19,7 @@ Example using [CoffeeScript](http://coffeescript.org/) and
 
     s3 = new AWS.S3()
 
-    list = blocking(s3, s3.listObjects)
+    list = s3.listObjectsSync
       Bucket: 'bucketname'
       Prefix: 'subdirectory/'
 

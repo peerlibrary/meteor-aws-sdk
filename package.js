@@ -3,10 +3,12 @@ Package.describe({
 });
 
 Npm.depends({
-  'aws-sdk': "1.5.0"
+  'aws-sdk': '1.5.0'
 });
 
 Package.on_use(function (api) {
+  api.use('blocking');
+
   api.export('AWS');
 
   api.add_files([
@@ -15,6 +17,6 @@ Package.on_use(function (api) {
 });
 
 Package.on_test(function (api) {
-  api.use(['aws-sdk', 'tinytest', 'test-helpers'], ['server']);
-  api.add_files('tests.js', ['server']);
+  api.use(['aws-sdk', 'tinytest', 'test-helpers'], 'server');
+  api.add_files('tests.js', 'server');
 });
