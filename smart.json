@@ -3,7 +3,7 @@
   "description": "Meteor smart package for AWS SDK node.js package",
   "homepage": "https://github.com/peerlibrary/meteor-aws-sdk",
   "author": "The PeerLibrary Project",
-  "version": "1.5.0.1",
+  "version": "1.5.0.2",
   "git": "https://github.com/peerlibrary/meteor-aws-sdk.git",
   "packages": {
     "blocking": {}
