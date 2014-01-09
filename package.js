@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Npm.depends({
-  'aws-sdk': '1.5.0'
+  'aws-sdk': '1.5.1'
 });
 
 Package.on_use(function (api) {
