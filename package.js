@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "Meteor smart package for AWS SDK node.js package"
+  summary: "SDK for AWS services including Amazon S3, Amazon EC2, DynamoDB, and Amazon SWF"
 });
 
 Npm.depends({
