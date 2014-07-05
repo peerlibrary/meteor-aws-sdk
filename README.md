@@ -7,8 +7,9 @@ DynamoDB, and Amazon SWF.
 
 Adding this package to your [Meteor](http://www.meteor.com/) application adds `AWS` object into the global scope,
 which you can then use [according to the documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/frames.html).
-In addition to existing API, a fibers-enabled synchronous ([blocking](https://github.com/peerlibrary/meteor-blocking))
-methods are added to objects. They are named the same, but with a `Sync` suffix.
+In addition to existing API, a [fibers](https://github.com/laverdet/node-fibers)-enabled synchronous
+([blocking](https://github.com/peerlibrary/meteor-blocking)) methods are added to objects. They are named
+the same, but with a `Sync` suffix.
 
 Example using [CoffeeScript](http://coffeescript.org/):
 
