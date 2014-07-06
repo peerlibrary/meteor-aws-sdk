@@ -1,4 +1,4 @@
-Tinytest.add('meteor-aws-sdk', function (test) {
+Tinytest.add('aws-sdk', function (test) {
   var isDefined = false;
   try {
     AWS;
