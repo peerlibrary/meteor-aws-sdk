@@ -1,13 +1,17 @@
 Package.describe({
-  summary: "SDK for AWS services including Amazon S3, Amazon EC2, DynamoDB, and Amazon SWF"
+  summary: "SDK for AWS services including Amazon S3, Amazon EC2, DynamoDB, and Amazon SWF",
+  version: '2.0.17-1',
+  name: 'peerlibrary:aws-sdk',
+  git: 'https://github.com/peerlibrary/meteor-aws-sdk.git'
 });
 
 Npm.depends({
-  'aws-sdk': '2.0.14'
+  'aws-sdk': '2.0.17'
 });
 
 Package.on_use(function (api) {
-  api.use('blocking');
+  api.versionsFrom('METEOR@0.9.1.1');
+  api.use('peerlibrary:blocking@0.4.2');
 
   api.export('AWS');
 
@@ -17,6 +21,6 @@ Package.on_use(function (api) {
 });
 
 Package.on_test(function (api) {
-  api.use(['aws-sdk', 'tinytest', 'test-helpers'], 'server');
+  api.use(['peerlibrary:aws-sdk', 'tinytest', 'test-helpers'], 'server');
   api.add_files('tests.js', 'server');
 });
