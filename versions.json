@@ -5,6 +5,10 @@
       "1.0.3"
     ],
     [
+      "peerlibrary:aws-sdk",
+      "2.0.17-1"
+    ],
+    [
       "peerlibrary:blocking",
       "0.4.2"
     ],
