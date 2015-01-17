@@ -1,12 +1,12 @@
 AWS SDK smart package
 =====================
 
-Meteor smart package for [AWS SDK](https://aws.amazon.com/sdkfornodejs/) node.js package, providing the SDK that helps
+Meteor smart package for [AWS SDK](https://aws.amazon.com/sdk-for-node-js/) node.js package, providing the SDK that helps
 take the complexity out of coding by providing JavaScript objects for AWS services including Amazon S3, Amazon EC2,
 DynamoDB, and Amazon SWF.
 
 Adding this package to your [Meteor](http://www.meteor.com/) application adds `AWS` object into the global scope,
-which you can then use [according to the documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/frames.html).
+which you can then use [according to the documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html).
 In addition to existing API, a [fibers](https://github.com/laverdet/node-fibers)-enabled synchronous
 ([blocking](https://github.com/peerlibrary/meteor-blocking)) methods are added to objects. They are named
 the same, but with a `Sync` suffix.
