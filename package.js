@@ -18,9 +18,15 @@ Package.on_use(function (api) {
   api.add_files([
     'server.js'
   ], 'server');
+
+  api.add_files([
+    'aws-sdk-js/dist/aws-sdk.js',
+    'client.js'
+  ], 'client');
 });
 
 Package.on_test(function (api) {
-  api.use(['peerlibrary:aws-sdk', 'tinytest', 'test-helpers'], 'server');
-  api.add_files('tests.js', 'server');
+  api.use(['peerlibrary:aws-sdk', 'tinytest', 'test-helpers'], ['client', 'server']);
+  api.add_files('client-tests.js', 'client');
+  api.add_files('server-tests.js', 'server');
 });
