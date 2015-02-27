@@ -14,3 +14,15 @@ Tinytest.add('aws-sdk', function (test) {
   test.isTrue(s3.getObjectSync);
   test.isTrue(s3.getObjectSync._blocking);
 });
+
+Tinytest.add('aws-sdk Future resolves', function (test) {
+  // Test should always pass, check if meteor instance crashed
+  var s3_1 = new AWS.S3({accessKeyId: 'fake', secretAccessKey: 'fakefake'});
+  var s3_2 = new AWS.S3({accessKeyId: 'fake2', secretAccessKey: 'fake2fake2'});
+  test.throws(function () {
+    s3_1.headBucketSync({Bucket: 'fakeBucket'});
+  });
+  test.throws(function () {
+    s3_2.headBucketSync({Bucket: 'fakeBucket2'});
+  });
+});
