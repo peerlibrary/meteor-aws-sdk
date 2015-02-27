@@ -11,7 +11,7 @@ Npm.depends({
 
 Package.on_use(function (api) {
   api.versionsFrom('METEOR@1.0.3.2');
-  api.use('peerlibrary:blocking@0.5.2');
+  api.use(['peerlibrary:blocking@0.5.2', 'underscore']);
 
   api.export('AWS');
 
