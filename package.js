@@ -1,12 +1,12 @@
 Package.describe({
   summary: "SDK for AWS services including Amazon S3, Amazon EC2, DynamoDB, and Amazon SWF",
-  version: '2.200.0_1',
+  version: '2.476.0_1',
   name: 'peerlibrary:aws-sdk',
   git: 'https://github.com/peerlibrary/meteor-aws-sdk.git'
 });
 
 Npm.depends({
-  'aws-sdk': '2.200.0'
+  'aws-sdk': '2.476.0'
 });
 
 Package.on_use(function (api) {
