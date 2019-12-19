@@ -1,8 +1,8 @@
 Package.describe({
   summary: "SDK for AWS services including Amazon S3, Amazon EC2, DynamoDB, and Amazon SWF",
   version: '2.531.0_1',
-  name: 'mrspark2591:aws-sdk',
-  git: 'https://github.com/Fasal-Tech/meteor-aws-sdk.git'
+  name: 'peerlibrary:aws-sdk',
+  git: 'https://github.com/peerlibrary/meteor-aws-sdk.git'
 });
 
 Npm.depends({
@@ -11,27 +11,26 @@ Npm.depends({
 
 Package.onUse(function (api) {
   api.versionsFrom('METEOR@1.8.1');
-
+  api.use('ecmascript');
   api.use([
     'peerlibrary:blocking@0.6.0',
     'underscore'
   ]);
 
-  api.export('AWS');
+  api.mainModule('server.js', 'server');
 
-  api.addFiles([
-    'server.js'
-  ], 'server');
+  api.mainModule('client.js', 'client', { lazy: true });
 });
 
 Package.onTest(function (api) {
   api.versionsFrom('METEOR@1.8.1');
-
+  api.use('ecmascript');
   api.use([
-    'mrspark2591:aws-sdk',
+    'peerlibrary:aws-sdk',
     'tinytest',
     'test-helpers'
-  ], ['server']);
-  
+  ], ['client', 'server']);
+
+  api.addFiles('client-tests.js', 'client');
   api.addFiles('server-tests.js', 'server');
 });
