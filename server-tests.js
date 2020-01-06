@@ -1,3 +1,5 @@
+import { AWS } from 'meteor/peerlibrary:aws-sdk';
+
 Tinytest.add('aws-sdk', function (test) {
   var isDefined = false;
   try {

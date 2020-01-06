@@ -11,27 +11,20 @@ Npm.depends({
 
 Package.onUse(function (api) {
   api.versionsFrom('METEOR@1.8.1');
-
+  api.use('ecmascript');
   api.use([
     'peerlibrary:blocking@0.6.0',
     'underscore'
   ]);
 
-  api.export('AWS');
+  api.mainModule('server.js', 'server');
 
-  api.addFiles([
-    'server.js'
-  ], 'server');
-
-  api.addFiles([
-    'aws-sdk-js/dist/aws-sdk.js',
-    'client.js'
-  ], 'client');
+  api.mainModule('client.js', 'client', { lazy: true });
 });
 
 Package.onTest(function (api) {
   api.versionsFrom('METEOR@1.8.1');
-
+  api.use('ecmascript');
   api.use([
     'peerlibrary:aws-sdk',
     'tinytest',

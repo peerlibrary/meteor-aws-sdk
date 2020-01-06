@@ -6,7 +6,7 @@ and [browser](https://aws.amazon.com/sdk-for-browser/) package, providing the SD
 take the complexity out of coding by providing JavaScript objects for AWS services including
 Amazon S3, Amazon EC2, DynamoDB, and Amazon SWF.
 
-Adding this package to your [Meteor](http://www.meteor.com/) application adds `AWS` object into the global scope,
+After Adding this package to your [Meteor](http://www.meteor.com/) application import it using `import { AWS } from 'meteor/peerlibrary:aws-sdk';`,
 which you can then use [according to the documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html).
 
 On the server-side, in addition to existing API, a [fibers](https://github.com/laverdet/node-fibers)-enabled

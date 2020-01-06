@@ -1,4 +1,4 @@
-AWS = Npm.require('aws-sdk');
+let AWS = Npm.require('aws-sdk');
 
 var originalDefineMethods = AWS.Service.defineMethods;
 
@@ -24,3 +24,5 @@ AWS.util.each(AWS, function iterator(name) {
     makeBlocking(AWS[name].prototype, methodName);
   });
 });
+
+module.exports = { AWS };
